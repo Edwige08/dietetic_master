@@ -1,0 +1,106 @@
+/* ------------------- BUTTON GENERAL ------------------- */
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md) var(--space-md);
+  border: none;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  color: var(--color-white);
+  font-size: var(--font-size-sm);
+  min-width: 150px;
+  position: relative;
+  text-decoration: none; 
+}
+
+/* ------------------- BUTTON TEXT ------------------- */
+.button-text {
+  width: fit-content;
+  position: relative;
+  text-decoration: none;
+}
+.button-text::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-white);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.button-text:hover::before {
+  transform: scaleX(1);
+}
+
+/* ------------------- BUTTON PRIMARY ------------------- */
+.button-primary {
+  background: linear-gradient(to bottom right, var(--color-primary-400), var(--color-primary-500));
+  border: solid 1px var(--color-primary-500);
+}
+.button-primary:hover {
+  border: solid 1px var(--color-primary-600);
+  background: var(--color-primary-500);
+}
+
+/* ------------------- BUTTON SECONDARY ------------------- */
+.button-secondary {
+  border: solid 1px var(--color-secondary-300);
+  background: linear-gradient(to bottom right, var(--color-secondary-200), var(--color-secondary-300));
+} 
+.button-secondary:hover {
+  border: solid 1px var(--color-secondary-500);
+  background: var(--color-secondary-300);
+}
+
+/* ------------------- BUTTON SUCCESS ------------------- */
+.button-success {
+  background: linear-gradient(to bottom right, var(--color-success-300), var(--color-success-400));
+  border: solid 1px var(--color-success-400);
+} 
+.button-success > .button-text {
+  color: var(--color-black);
+}
+.button-success:hover {
+  border: solid 1px var(--color-success-500);
+  background: var(--color-success-400);
+}
+.button-success > .button-text::before {
+  background-color: var(--color-black);
+}
+
+/* ------------------- BUTTON WARNING ------------------- */
+.button-warning {
+  border: solid 1px var(--color-warning-300);
+  background: linear-gradient(to bottom right, var(--color-warning-200), var(--color-warning-300));
+} 
+.button-warning > .button-text {
+  color: var(--color-black);
+}
+.button-warning:hover {
+  border: solid 1px var(--color-warning-400);
+  background: var(--color-warning-300);
+}
+.button-warning > .button-text::before {
+  background-color: var(--color-black);
+}
+
+
+/* ------------------- BUTTON DANGER ------------------- */
+.button-danger {
+  border: solid 1px var(--color-danger-300);
+  background: linear-gradient(to bottom right, var(--color-danger-200), var(--color-danger-300));
+} 
+.button-danger > .button-text {
+  color: var(--color-black);
+}
+.button-danger:hover {
+  border: solid 1px var(--color-danger-400);
+  background: var(--color-danger-300);
+}
+.button-danger > .button-text::before {
+  background-color: var(--color-black);
+}

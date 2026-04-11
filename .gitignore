@@ -1,0 +1,20 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+storybook-static/
+
+# Next.js
+.next/
+out/
+
+# Variables d'environnement
+.env
+.env.local
+.env.*.local
+
+# TypeScript
+*.tsbuildinfo
+
+# Tests
+coverage/
