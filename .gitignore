@@ -18,3 +18,9 @@ out/
 
 # Tests
 coverage/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.env
