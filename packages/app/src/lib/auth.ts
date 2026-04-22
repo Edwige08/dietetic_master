@@ -24,9 +24,17 @@ export async function login(email: string, password: string) {
   return data;
 }
 
-export function logout() {
-  localStorage.removeItem("access_token");
-  localStorage.removeItem("refresh_token");
+export async function logout() {
+  const refresh = localStorage.getItem("refresh_token");
+
+  try {
+    if (refresh) {
+      await api.post("/logout/", { refresh });
+    }
+  } finally {
+    localStorage.removeItem("access_token");
+    localStorage.removeItem("refresh_token");
+  }
 }
 
 export async function refreshAccessToken() {
