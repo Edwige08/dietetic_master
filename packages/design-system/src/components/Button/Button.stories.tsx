@@ -30,6 +30,14 @@ const meta: Meta<typeof Button> = {
       action: 'clicked',
       description: 'Fonction appelée au clic',
     },
+    isLoading: {
+      control: 'boolean',
+      description: 'Desactive le bouton et affiche un libelle de chargement',
+    },
+    disabled: {
+      control: 'boolean',
+      description: 'Desactive le bouton',
+    },
   },
 };
 
@@ -120,5 +128,24 @@ export const Danger: Story = {
   args: {
     children: 'Danger Button',
     variant: 'danger',
+  },
+};
+
+export const Loading: Story = {
+  name: 'Chargement',
+  args: {
+    children: 'Je me connecte',
+    variant: 'primary',
+    isLoading: true,
+    loadingLabel: 'Connexion...',
+  },
+};
+
+export const Disabled: Story = {
+  name: 'Desactive',
+  args: {
+    children: 'Envoyer',
+    variant: 'secondary',
+    disabled: true,
   },
 };

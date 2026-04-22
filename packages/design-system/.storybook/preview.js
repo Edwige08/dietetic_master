@@ -1,4 +1,5 @@
 import '../src/tokens/tokens.css';
+import '../src/tokens/semantic.css';
 import '../src/reset.css';
 import '../src/typography.css';
 

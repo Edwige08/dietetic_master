@@ -1,4 +1,4 @@
-/* typography.css */
+/* ---------- ROOT ---------- */
 :root {
   --background: var(--color-neutrals-30);
   --foreground: var(--color-neutrals-900);
@@ -13,11 +13,15 @@
   }
 }
 
+/* ---------- COLOR SCHEME ---------- */
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
 }
+
+/* ---------- TYPOGRAPHY ---------- */
 
 html {
   height: 100%;
@@ -50,12 +54,18 @@ main {
   gap: var(--space-md);
   max-width: 800px;
   min-height: 100vh;
-  padding: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
   background-color: var(--color-neutrals-20);
+  color: var(--color-body);
+
+  @media screen and (max-width: 425px) {
+    margin-bottom: var(--dock-height);
+  }
 }
 
-h1 { font-size: var(--font-size-3xl); font-weight: var(--font-weight-bold); line-height: var(--font-line-height-normal); }
-h2 { font-size: var(--font-size-2xl); font-weight: var(--font-weight-bold); line-height: var(--font-line-height-normal); }
-h3 { font-size: var(--font-size-xl);  font-weight: var(--font-weight-semibold); }
-h4 { font-size: var(--font-size-lg);  font-weight: var(--font-weight-semibold); }
-p  { font-size: var(--font-size-sm);  line-height: var(--font-line-height-normal); }
+h1 { width: 100%; font-size: var(--font-size-2xl); font-weight: var(--font-weight-bold); line-height: var(--font-line-height-normal); }
+h2 { width: 100%; font-size: var(--font-size-xl); font-weight: var(--font-weight-bold); line-height: var(--font-line-height-normal); }
+h3 { width: 100%; font-size: var(--font-size-lg);  font-weight: var(--font-weight-semibold); }
+h4 { width: 100%; font-size: var(--font-size-md);  font-weight: var(--font-weight-semibold); }
+p  { width: 100%; font-size: var(--font-size-sm);  line-height: var(--font-line-height-normal); }
+

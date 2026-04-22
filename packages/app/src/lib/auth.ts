@@ -6,11 +6,10 @@ type LoginResponse = {
 };
 
 type RegisterPayload = {
-  username: string;
-  email?: string;
+  email: string;
   password: string;
-  first_name?: string;
-  last_name?: string;
+  first_name: string;
+  last_name: string;
 };
 
 export async function register(payload: RegisterPayload) {
@@ -18,8 +17,8 @@ export async function register(payload: RegisterPayload) {
   return data;
 }
 
-export async function login(username: string, password: string) {
-  const { data } = await api.post<LoginResponse>("/token/", { username, password });
+export async function login(email: string, password: string) {
+  const { data } = await api.post<LoginResponse>("/token/", { email, password });
   localStorage.setItem("access_token", data.access);
   localStorage.setItem("refresh_token", data.refresh);
   return data;

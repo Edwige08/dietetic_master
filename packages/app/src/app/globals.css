@@ -1,6 +1,7 @@
-@import "@monorepo/design-system/src/tokens/tokens.css";    /* 1. palette brute */
-@import "@monorepo/design-system/src/reset.css";            /* 3. reset navigateur */
-@import "@monorepo/design-system/src/typography.css";       /* 4. typographie globale */
+@import "@monorepo/design-system/src/tokens/tokens.css";
+@import "@monorepo/design-system/src/tokens/semantic.css";
+@import "@monorepo/design-system/src/reset.css";
+@import "@monorepo/design-system/src/typography.css";
 
 .center {
   display: flex;
@@ -13,4 +14,46 @@
   place-content: space-around center;
   display: flex;
   justify-content: space-evenly;
+}
+.flex-column {
+  display: flex;
+  flex-flow: wrap;
+  flex-direction: column;
+  place-content: space-around center;
+  justify-content: space-evenly;
+}
+.form {
+  margin: 0 auto;
+  width: fit-content;
+  max-width: 400px;
+  padding: var(--space-lg);
+  background-color: var(--color-neutrals-20);
+  border: solid 1px var(--color-neutrals-50);
+  border-radius: var(--radius-lg);
+}
+.intro-input {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-md);
+}
+.form-error {
+  margin-bottom: var(--space-md);
+  color: var(--color-danger-500);
+  font-size: var(--font-size-sm);
+}
+.form-success {
+  margin-bottom: var(--space-md);
+  color: var(--color-success-500);
+  font-size: var(--font-size-sm);
+}
+.bold {
+  font-weight: var(--font-weight-bold);
+}
+.redirection-link {
+  padding: var(--space-sm) 0;
+  color: var(--color-primary-500);
+  font-size: var(--font-size-sm);
+  text-decoration: underline;
+}
+.width-100 {
+  width: 100%;
 }

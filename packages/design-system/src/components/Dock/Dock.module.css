@@ -1,0 +1,32 @@
+.dock {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: var(--dock-height);
+  box-sizing: border-box;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0 calc(10px + env(safe-area-inset-bottom));
+  border-top: solid 1px #ccc;
+  z-index: 20;
+}
+
+.dock a {
+  color: #111;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.active {
+  background-color: red;
+  color: red;
+}
+
+@media (min-width: 641px) {
+  .dock {
+    display: none;
+  }
+}
