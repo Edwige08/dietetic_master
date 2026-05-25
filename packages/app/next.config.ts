@@ -7,4 +7,8 @@ const nextConfig: NextConfig = {
   },
 };
 
+module.exports = {
+  allowedDevOrigins: ["http://localhost:3000", '192.168.1.90']
+}
+
 export default nextConfig;

@@ -21,7 +21,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={atkinsonHyperlegible.variable}>
-      <body>{children}</body>
+      <body>
+        {children}
+
+        <footer>
+          <h2>Dietetic Master</h2>
+          <ul>
+            <li>Accueil</li>
+            <li>À propos</li>
+            <li>Politique de confidentialité</li>
+            <li><a href="/mentions-legales">Mentions légales</a></li>
+          </ul>
+          <p>Copyright © 2026 Dietetic Master. Tous droits réservés.</p>
+        </footer>
+      </body>
+
     </html>
   );
 }

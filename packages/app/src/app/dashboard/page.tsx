@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { Button, Dock } from "@monorepo/design-system";
+import { Button, Dock, Navbar } from "@monorepo/design-system";
 import { logout } from "@/lib/auth";
 import "../globals.css";
 
@@ -14,6 +14,10 @@ export default function Home() {
   }
 
   return (
+    <div>
+
+      <Navbar activeItem="profile" />
+
       <main >
 
         <div className="center">
@@ -23,10 +27,13 @@ export default function Home() {
 
         <Dock activeItem="profile" />
 
-        <Button variant="danger" onClick={handleLogout}>
-          Se déconnecter
-        </Button>
+        <div className="fit-content">
+          <Button variant="danger" onClick={handleLogout}>
+            Se déconnecter
+          </Button>
+        </div>
 
       </main>
+    </div>
   );
 }

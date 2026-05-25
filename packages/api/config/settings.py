@@ -52,12 +52,12 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = config(
     "DJANGO_CORS_ALLOWED_ORIGINS",
-    default="http://localhost:3000",
+    default="http://localhost:3000,http://192.168.1.90:3000",
     cast=Csv(),
 )
 CSRF_TRUSTED_ORIGINS = config(
     "DJANGO_CSRF_TRUSTED_ORIGINS",
-    default="http://localhost:3000",
+    default="http://localhost:3000,http://192.168.1.90:3000",
     cast=Csv(),
 )
 

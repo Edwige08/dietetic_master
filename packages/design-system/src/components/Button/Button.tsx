@@ -6,6 +6,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   variant?: 'primary' | 'secondary' | 'success' | 'warning' | 'danger';
   isLoading?: boolean;
   loadingLabel?: string;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
@@ -15,6 +16,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
     type = 'button',
     isLoading = false,
     loadingLabel,
+    onClick,
     disabled,
     className,
     ...buttonProps
@@ -36,6 +38,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
         className,
       ].filter(Boolean).join(' ')}
       {...buttonProps}
+      onClick={onClick}
     >
       <span className={styles['button-text']}>
         {isLoading ? loadingLabel ?? children : children}

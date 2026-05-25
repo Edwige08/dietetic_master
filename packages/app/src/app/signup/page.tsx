@@ -98,10 +98,12 @@ export default function Home() {
             value={formData.password}
             onChange={(event) => updateField('password', event.target.value)}
           />
-          <Button variant="primary" type="submit" isLoading={isSubmitting} loadingLabel="Creation...">
-            Je m&apos;inscris
-          </Button>
-          <a href="/login" className="center redirection-link">J&apos;ai déjà un compte</a>
+          <div className="fit-content">
+            <Button variant="primary" type="submit" isLoading={isSubmitting} loadingLabel="Creation...">
+              Je m&apos;inscris
+            </Button>
+            <a href="/login" className="center redirection-link">J&apos;ai déjà un compte</a>
+          </div>
         </form>
         <Dock />
 

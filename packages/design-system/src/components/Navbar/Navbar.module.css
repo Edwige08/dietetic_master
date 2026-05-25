@@ -1,0 +1,34 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  width: 100vw;
+  background-color: var(--color-neutrals-0);
+  border-bottom: solid 1px var(--color-neutrals-50);
+  box-shadow: var(--shadow-md);
+}
+.navbar-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-lg);
+  text-decoration: none;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.screen_less_sm {
+  display: none;
+}
+.screen_sm_or_more {
+  display: none;
+}
+
+@media (max-width: 641px) {
+  .navbar {
+    display: none;
+  }
+}

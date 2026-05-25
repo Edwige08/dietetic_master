@@ -1,48 +1,51 @@
 'use client';
 
-import { Button, Dock } from "@monorepo/design-system";
+import { Button, Dock, Navbar } from "@monorepo/design-system";
 
 export default function Home() {
   return (
-      <main >
-
+    <div>
+      <Navbar activeItem="home" />
+      <main>
         <div className="center">
           <h1>Dietetic Master</h1>
-          <p>Dietetic Master transforme votre apprentissage en expérience immersive. Révisez les notions fondamentales de vos cours, analysez des cas cliniques complets et progressez à votre rythme.  </p>
-        </div>
 
-        <div className="flex-row">
-          <a href="/signup">
-            <Button variant="primary">
-              Je m&apos;inscris
-            </Button>
-          </a>
-
-          <a href="/login">
-            <Button variant="secondary">
-              Je me connecte
-            </Button>
-          </a>
+          <section className="hero">
+            <h3>Maîtrisez la diététique par la pratique</h3>
+            <p>Dietetic Master transforme votre apprentissage en expérience immersive. Révisez les notions fondamentales de vos cours, analysez des cas cliniques complets et progressez à votre rythme.</p>
+            <div className='hero-buttons'>
+              <Button onClick={() => window.location.href = "/signup"} variant="primary">
+                Je m&apos;inscris
+              </Button>
+              <Button onClick={() => window.location.href = "/login"} variant="secondary">
+                Je me connecte
+              </Button>
+            </div>
+          </section>
 
         </div>
 
-        <div className="flex-column">
+        <div className="flex-column gap-md">
           <h2>Fonctionnalités</h2>
           <p>Des outils puissants pour vous aider à maîtriser vos connaissances en diététique et à progresser efficacement.</p>
 
-          <div className="width-100">
-            <h3>Flashcards</h3>
-            <p>Révisez les notions fondamentales de vos cours grâce à des cartes interactives.</p>
-          </div>
-          
-          <div className="width-100">
-            <h3>Quiz </h3>
-            <p>Testez vos connaissances avec des quiz et suivez vos progrès.</p>
-          </div>
+          <div className="cards-3">
+            <div className="width-100 card bg-secondary-light">
+              <h3>Flashcards</h3>
+              <p>Révisez les notions fondamentales de vos cours grâce à des cartes interactives.</p>
+            </div>
+            
+            <div className="cards-2-row">
+              <div className="width-100 card bg-warning-light">
+                <h3>Quiz </h3>
+                <p>Testez vos connaissances avec des quiz et suivez vos progrès.</p>
+              </div>
 
-          <div>
-            <h3>Cas cliniques</h3>
-            <p>Analysez des cas cliniques complets et appliquez vos connaissances comme en situation réelle.</p>
+              <div className="width-100 card bg-success-light">
+                <h3>Cas cliniques</h3>
+                <p>Analysez des cas cliniques complets et appliquez vos connaissances comme en situation réelle.</p>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -53,7 +56,7 @@ export default function Home() {
         </div>
 
         <Dock activeItem="home" />
-
       </main>
+    </div>
   );
 }

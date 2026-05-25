@@ -7,6 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "pnpm --filter @monorepo/app dev",
+    "api": "cd packages/api && python manage.py runserver",
     "build": "pnpm --filter @monorepo/app build",
     "storybook": "pnpm --filter @monorepo/design-system storybook",
     "build-storybook": "pnpm --filter @monorepo/design-system build-storybook"
