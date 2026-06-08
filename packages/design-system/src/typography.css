@@ -51,17 +51,14 @@ body {
 main {
   display: flex;
   flex-direction: column;
+  margin: var(--space-md) auto;
   gap: var(--space-md);
-  min-width: 100%;
+  /* min-width: 100%; */
   max-width: 800px;
   min-height: 100vh;
-  padding: var(--space-md) var(--space-lg);
+  padding: 0 var(--space-lg) var(--space-md) var(--space-lg);
   background-color: var(--color-neutrals-20);
   color: var(--color-body);
-
-  @media screen and (max-width: 425px) {
-    margin-bottom: var(--dock-height);
-  }
 }
 
 footer {
@@ -78,6 +75,7 @@ footer {
   ul {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: var(--space-xs);
     list-style: none;
     padding: 0;
@@ -88,6 +86,10 @@ footer {
       gap: var(--space-lg);
     }
   }
+  
+  @media screen and (max-width: 425px) {
+    margin-bottom: var(--dock-height);
+  }
 }
 
 h1 { width: 100%; font-size: var(--font-size-2xl); font-weight: var(--font-weight-bold); line-height: var(--font-line-height-normal); }
@@ -96,3 +98,10 @@ h3 { width: 100%; font-size: var(--font-size-lg);  font-weight: var(--font-weigh
 h4 { width: 100%; font-size: var(--font-size-md);  font-weight: var(--font-weight-semibold); }
 p  { width: 100%; font-size: var(--font-size-sm);  line-height: var(--font-line-height-normal); }
 
+ul {
+  width: 100%;
+  font-size: var(--font-size-sm);
+  line-height: var(--font-line-height-normal);
+  list-style: disc;
+  padding-left: var(--space-lg);
+}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Atkinson_Hyperlegible } from "next/font/google";
 import "./globals.css";
+import Link from "next/dist/client/link";
 
 
 const atkinsonHyperlegible = Atkinson_Hyperlegible({
@@ -27,10 +28,11 @@ export default function RootLayout({
         <footer>
           <h2>Dietetic Master</h2>
           <ul>
-            <li>Accueil</li>
+            <li><Link href="/">Accueil</Link></li>
             <li>À propos</li>
-            <li>Politique de confidentialité</li>
-            <li><a href="/mentions-legales">Mentions légales</a></li>
+            <li><Link href="/politique-confidentialite">Politique de confidentialité</Link></li>
+            <li><Link href="/mentions-legales">Mentions légales</Link></li>
+            <li><Link href="/accessibilite">Accessibilité : non conforme</Link></li>
           </ul>
           <p>Copyright © 2026 Dietetic Master. Tous droits réservés.</p>
         </footer>
