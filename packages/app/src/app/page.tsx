@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, Dock, Navbar } from "@monorepo/design-system";
+import { Button, Dock, Navbar, CardFeature } from "@monorepo/design-system";
 
 export default function Home() {
   return (
@@ -30,21 +30,10 @@ export default function Home() {
           <p>Des outils puissants pour vous aider à maîtriser vos connaissances en diététique et à progresser efficacement.</p>
 
           <div className="cards-3">
-            <div className="width-100 card bg-secondary-light">
-              <h3>Flashcards</h3>
-              <p>Révisez les notions fondamentales de vos cours grâce à des cartes interactives.</p>
-            </div>
-            
+            <CardFeature title="Flashcards" description="Révisez les notions fondamentales de vos cours grâce à des cartes interactives." variant="secondary" />
             <div className="cards-2-row">
-              <div className="width-100 card bg-warning-light">
-                <h3>Quiz </h3>
-                <p>Testez vos connaissances avec des quiz et suivez vos progrès.</p>
-              </div>
-
-              <div className="width-100 card bg-success-light">
-                <h3>Cas cliniques</h3>
-                <p>Analysez des cas cliniques complets et appliquez vos connaissances comme en situation réelle.</p>
-              </div>
+              <CardFeature title="Quiz" description="Testez vos connaissances avec des quiz et suivez vos progrès." variant="warning" />
+              <CardFeature title="Cas cliniques" description="Analysez des cas cliniques complets et appliquez vos connaissances comme en situation réelle." variant="success" />
             </div>
           </div>
 

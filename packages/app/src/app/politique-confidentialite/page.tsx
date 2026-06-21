@@ -1,10 +1,12 @@
 'use client';
 
-import { Dock } from "@monorepo/design-system";
+import { Dock, Navbar } from "@monorepo/design-system";
 import "../globals.css";
 
 export default function Home() {
   return (
+    <div>
+      <Navbar />
       <main >
 
         <div className="center">
@@ -98,9 +100,8 @@ export default function Home() {
 
 
         </div>
-
         <Dock />
-
       </main>
+    </div>
   );
 }

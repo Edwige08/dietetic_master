@@ -1,0 +1,27 @@
+.card article {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  width: 100%;
+  padding: var(--space-md);
+  border: solid 1px var(--color-neutrals-50);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  background-color: var(--color-neutrals-0);
+}
+
+.bg-primary-light {
+  background-color: var(--color-primary-50);
+}
+.bg-secondary-light {
+  background-color: var(--color-secondary-50);
+}
+.bg-warning-light {
+  background-color: var(--color-warning-50);
+}
+.bg-success-light {
+  background-color: var(--color-success-50);
+}
+.bg-danger-light {
+  background-color: var(--color-danger-50);
+}

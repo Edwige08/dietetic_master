@@ -34,6 +34,11 @@ class RegisterSerializer(serializers.ModelSerializer):
 
         return User.objects.create_user(username=username, **validated_data)
 
+class MeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ["id", "email", "first_name", "last_name", "role"]
+        read_only_fields = fields
 
 class EmailTokenObtainPairSerializer(TokenObtainPairSerializer):
     email = serializers.EmailField(write_only=True)

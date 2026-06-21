@@ -12,6 +12,14 @@ type RegisterPayload = {
   last_name: string;
 };
 
+type MeResponse = {
+  id: number;
+  email: string;
+  first_name: string;
+  last_name: string;
+  role: string;
+};
+
 export async function register(payload: RegisterPayload) {
   const { data } = await api.post("/register/", payload);
   return data;
@@ -43,4 +51,10 @@ export async function refreshAccessToken() {
   const { data } = await api.post<{ access: string }>("/token/refresh/", { refresh });
   localStorage.setItem("access_token", data.access);
   return data.access;
+}
+
+
+export async function getCurrentUser() {
+  const { data } = await api.get<MeResponse>("/me/");
+  return data;
 }

@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { Dock, Navbar } from "@monorepo/design-system";
+import { Dock, FlashcardsTable, Navbar } from "@monorepo/design-system";
 import Link from 'next/link';
 
 export default function Home() {
@@ -14,7 +14,6 @@ export default function Home() {
   return (
     <div>
       <Navbar activeItem="profile" />
-
       <main >
 
         <div>
@@ -29,8 +28,13 @@ export default function Home() {
 
         <div>
           <h2>Mes flashcards</h2>
-          <Link href="/flashcards/create" className="activity-button bg-secondary-light">Créer un set de flashcard</Link>
         </div>
+
+        <div>
+          <FlashcardsTable title="Mes flashcards" />
+        </div>
+
+        <Link href="/flashcards/create" className="activity-button bg-secondary-light">Créer un set de flashcard</Link>
         
         <Dock />
       </main>

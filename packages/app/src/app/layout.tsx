@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Atkinson_Hyperlegible } from "next/font/google";
 import "./globals.css";
-import Link from "next/dist/client/link";
+import Link from 'next/link';
+import Providers from "./providers";
 
 
 const atkinsonHyperlegible = Atkinson_Hyperlegible({
@@ -23,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={atkinsonHyperlegible.variable}>
       <body>
-        {children}
+        <Providers>{children}</Providers>
 
         <footer>
           <h2>Dietetic Master</h2>

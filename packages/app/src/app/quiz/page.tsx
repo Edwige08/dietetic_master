@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { Button, Dock, Navbar } from "@monorepo/design-system";
+import { Dock, Navbar } from "@monorepo/design-system";
 import { logout } from "@/lib/auth";
 import "../globals.css";
 
@@ -16,7 +16,6 @@ export default function Home() {
   return (
     <div>
       <Navbar activeItem="profile" />
-
       <main >
 
         <div className="center">

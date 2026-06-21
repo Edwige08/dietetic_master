@@ -2,7 +2,7 @@
 
 import { FormEvent, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { Button, Dock, Input } from "@monorepo/design-system";
+import { Button, Dock, Input, Navbar } from "@monorepo/design-system";
 import { register } from "@/lib/auth";
 import "../globals.css";
 
@@ -28,7 +28,6 @@ export default function Home() {
     setSuccessMessage('');
     setIsSubmitting(true);
 
-    console.log(formData);
     try {
       await register({
         email: formData.email,
@@ -47,6 +46,8 @@ export default function Home() {
   }
 
   return (
+    <div>
+      <Navbar />
       <main >
 
         <div className="center">
@@ -108,5 +109,6 @@ export default function Home() {
         <Dock />
 
       </main>
+    </div>
   );
 }

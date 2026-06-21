@@ -3,12 +3,13 @@
 import { FormEvent, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { AxiosError } from 'axios';
-import { Button, Dock, Input } from "@monorepo/design-system";
-import { login } from "@/lib/auth";
+import { Button, Dock, Input, Navbar } from "@monorepo/design-system";
+import { useAuth } from '@/contexts/useAuth';
 import "../globals.css";
 
 export default function Home() {
   const router = useRouter();
+  const { login: authLogin } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
@@ -20,7 +21,7 @@ export default function Home() {
     setIsSubmitting(true);
 
     try {
-      await login(email, password);
+      await authLogin(email, password);
       router.push('/dashboard');
     } catch (error) {
       const apiError = error as AxiosError<{ detail?: string }>;
@@ -31,6 +32,8 @@ export default function Home() {
   }
 
   return (
+    <div>
+      <Navbar />
       <main >
 
         <div className="center">
@@ -68,5 +71,6 @@ export default function Home() {
         <Dock />
 
       </main>
+    </div>
   );
 }

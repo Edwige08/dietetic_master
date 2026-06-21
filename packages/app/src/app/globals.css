@@ -15,6 +15,12 @@
   display: flex;
   justify-content: space-evenly;
 }
+.flex-row-space-between {
+  flex-flow: wrap;
+  place-content: space-around center;
+  display: flex;
+  justify-content: space-between;
+}
 .flex-column {
   display: flex;
   flex-flow: wrap;
@@ -39,7 +45,16 @@
   width: fit-content;
   max-width: 400px;
   padding: var(--space-lg);
-  background-color: var(--color-neutrals-20);
+  background-color: var(--color-white);
+  border: solid 1px var(--color-neutrals-50);
+  border-radius: var(--radius-lg);
+}
+.flashcard-form {
+  margin: 0 auto;
+  width: fit-content;
+  width: 100%;
+  padding: var(--space-lg);
+  background-color: var(--color-white);
   border: solid 1px var(--color-neutrals-50);
   border-radius: var(--radius-lg);
 }
@@ -145,4 +160,9 @@
   box-shadow: var(--shadow-sm);
   width: 47%;
   text-align: center;
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }

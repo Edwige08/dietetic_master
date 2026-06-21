@@ -1,8 +1,12 @@
 export { Button } from './components/Button/Button.tsx';
+export { CardFeature } from './components/CardFeature/CardFeature.tsx';
 export { Dock } from './components/Dock/Dock.tsx';
+export { FlashcardsTable } from './components/FlashcardsTable/FlashcardsTable.tsx';
 export { Input } from './components/Input/Input.tsx';
 export { Navbar } from './components/Navbar/Navbar.tsx';
 export type { ButtonProps } from './components/Button/Button.tsx';
+export type { CardFeatureProps } from './components/CardFeature/CardFeature.tsx';
 export type { DockProps } from './components/Dock/Dock.tsx';
+export type { FlashcardsTableProps } from './components/FlashcardsTable/FlashcardsTable.tsx';
 export type { InputProps } from './components/Input/Input.tsx';
 export type { NavbarProps } from './components/Navbar/Navbar.tsx';

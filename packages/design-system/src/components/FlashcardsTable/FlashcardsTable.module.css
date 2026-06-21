@@ -1,0 +1,9 @@
+.table {
+    border: solid 1px black;
+}
+.table th, .table td {
+    border: solid 1px black;
+    padding: var(--space-xs) var(--space-sm);
+    text-align: center;
+
+}

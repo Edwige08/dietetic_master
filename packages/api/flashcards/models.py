@@ -9,6 +9,23 @@ class Category(models.Model):
         return self.name
 
 
+class FlashcardSet(models.Model):
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name='flashcard_sets'
+    )
+
+    title = models.CharField(max_length=255)
+    description = models.TextField(blank=True)
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.title
+    
+
 class Flashcard(models.Model):
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
@@ -24,6 +41,12 @@ class Flashcard(models.Model):
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
+        related_name='flashcards'
+    )
+
+    set = models.ForeignKey(
+        FlashcardSet,
+        on_delete=models.CASCADE,
         related_name='flashcards'
     )
 

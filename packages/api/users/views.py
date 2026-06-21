@@ -6,8 +6,7 @@ from rest_framework_simplejwt.exceptions import TokenError
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework_simplejwt.views import TokenObtainPairView
 
-from .serializers import EmailTokenObtainPairSerializer, RegisterSerializer
-
+from .serializers import EmailTokenObtainPairSerializer, MeSerializer, RegisterSerializer
 
 class RegisterView(generics.CreateAPIView):
     serializer_class = RegisterSerializer
@@ -38,3 +37,11 @@ class LogoutView(APIView):
             )
 
         return Response(status=status.HTTP_205_RESET_CONTENT)
+
+        
+class MeView(generics.RetrieveAPIView):
+    serializer_class = MeSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get_object(self):
+        return self.request.user
