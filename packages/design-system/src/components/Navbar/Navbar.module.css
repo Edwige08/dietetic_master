@@ -7,6 +7,7 @@
   background-color: var(--color-neutrals-0);
   border-bottom: solid 1px var(--color-neutrals-50);
   box-shadow: var(--shadow-md);
+  font-size: var(--font-size-sm);
 }
 .navbar-links {
   display: flex;
@@ -17,7 +18,8 @@
 }
 
 .active {
-  font-weight: bold;
+  font-weight: 600;
+  color: var(--color-primary-500);
 }
 
 .screen_less_sm {
