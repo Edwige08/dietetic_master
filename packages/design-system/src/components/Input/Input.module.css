@@ -12,6 +12,7 @@
 }
 .inputField {
   padding: var(--space-sm);
+  background-color: var(--color-neutrals-20);
   border: solid 1px var(--color-neutrals-50);
   border-radius: var(--radius-md);
 }
@@ -21,4 +22,37 @@
 }
 .required {
   color: var(--color-danger-500);
+}
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputField {
+  width: 100%;
+  padding: var(--space-sm);
+  padding-right: 2.75rem;
+  background-color: var(--color-neutrals-20);
+  border: solid 1px var(--color-neutrals-50);
+  border-radius: var(--radius-md);
+}
+
+.inputFieldWithToggle {
+  padding-right: 2.75rem;
+}
+
+.passwordToggleBtn {
+  position: absolute;
+  right: var(--space-sm);
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-neutrals-400);
 }
