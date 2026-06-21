@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Dock.module.css';
+import { GraduationCapIcon  , UserIcon, HouseIcon } from "@phosphor-icons/react";
 
 export interface DockProps {
   homeUrl?: string;
@@ -17,13 +18,22 @@ export const Dock = ({
   return (
     <nav className={styles.dock} aria-label="Navigation principale">
       <a href={homeUrl} className={activeItem === "home" ? styles.active : ""}>
-        Home
+        <HouseIcon size={24} />
+        <p>
+          Home
+        </p>
       </a>
       <a href={studyUrl} className={activeItem === "study" ? styles.active : ""}>
-        Study
+        <GraduationCapIcon  size={24} />
+        <p>
+          Study
+        </p>
       </a>
       <a href={profileUrl} className={activeItem === "profile" ? styles.active : ""}>
-        Profile
+        <UserIcon size={24} />
+        <p>
+          Profile
+        </p>
       </a>
     </nav>
   );
