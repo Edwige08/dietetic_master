@@ -1,7 +1,10 @@
 from datetime import timedelta
 from pathlib import Path
-
+from dotenv import load_dotenv
 from decouple import Csv, config
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -37,6 +40,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'users',
     'flashcards',
+    'ai',
 ]
 
 MIDDLEWARE = [
@@ -173,3 +177,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+OPENROUTER_API_KEY = config("OPENROUTER_API_KEY")
+OPENROUTER_BASE_URL = config("OPENROUTER_BASE_URL")
+OPENROUTER_DEFAULT_MODEL = config("OPENROUTER_DEFAULT_MODEL")
+OPENROUTER_FALLBACK_MODELS = config("OPENROUTER_FALLBACK_MODELS")
+OPENROUTER_FALLBACK_MODELS = [model.strip() for model in OPENROUTER_FALLBACK_MODELS.split(",")]
+OPENROUTER_SITE_URL = config("OPENROUTER_SITE_URL")
+OPENROUTER_SITE_NAME = config("OPENROUTER_SITE_NAME")
