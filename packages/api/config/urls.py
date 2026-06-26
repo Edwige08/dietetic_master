@@ -9,6 +9,7 @@ urlpatterns = [
     # API
     path("api/", include("flashcards.urls")),
     path("api/", include("users.urls")),
+    path("api/ai/", include("ai.urls")),
 
     # AUTH JWT
     path("api/token/", EmailTokenObtainPairView.as_view(), name="token_obtain_pair"),
