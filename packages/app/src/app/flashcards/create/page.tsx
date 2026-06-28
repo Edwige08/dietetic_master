@@ -1,35 +1,19 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
-import { Button, Dock, Input, Navbar } from "@monorepo/design-system";
-import { useState } from "react";
+import { Dock, Navbar } from "@monorepo/design-system";
 import CreateFlashcardSet from '@/components/CreateFlashcardSet';
 import CreateFlashcard from '@/components/CreateFlashcard';
+import BackButton from '@/components/BackButton';
 
 export default function Home() {
-  const router = useRouter();
-
-  const handleBack = () => {
-    router.back()
-  }
-  const [formData, setFormData] = useState({
-    question: '',
-    answer: '',
-  });
   
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [titleCreated, setTitleCreated] = useState(false);
-
-
   return (
     <div>
       <Navbar activeItem="profile" />
       <main >
 
         <div>
-          <button onClick={handleBack}>
-            Retour à la page précédente
-          </button>
+          <BackButton fallbackHref="/flashcards" />
         </div>
 
         <div className="center">

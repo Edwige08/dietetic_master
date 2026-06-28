@@ -1,25 +1,17 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
 import { Dock, FlashcardsTable, Navbar } from "@monorepo/design-system";
 import Link from 'next/link';
+import BackButton from '@/components/BackButton';
 
 export default function Home() {
-  const router = useRouter();
-
-  const handleBack = () => {
-    router.back()
-  }
-
   return (
     <div>
       <Navbar activeItem="profile" />
       <main >
 
         <div>
-          <button onClick={handleBack}>
-            Retour à la page précédente
-          </button>
+          <BackButton fallbackHref="/dashboard" />
         </div>
         <div className="center">
           <h1>Flashcards</h1>

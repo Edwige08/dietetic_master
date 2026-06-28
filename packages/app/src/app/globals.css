@@ -166,3 +166,12 @@
   opacity: 0.5;
   pointer-events: none;
 }
+
+.arrowLeft {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+.arrowLeft:hover {
+  text-decoration: underline;
+}
