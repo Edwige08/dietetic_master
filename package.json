@@ -8,7 +8,7 @@
     "test": "pnpm --filter @monorepo/app test",
     "test:watch": "pnpm --filter @monorepo/app test -- --watch",
     "dev": "pnpm --filter @monorepo/app dev",
-    "api": "cd packages/api && python manage.py runserver",
+    "api": "cd packages/api && venv\\Scripts\\python manage.py runserver",
     "build": "pnpm --filter @monorepo/app build",
     "storybook": "pnpm --filter @monorepo/design-system storybook",
     "build-storybook": "pnpm --filter @monorepo/design-system build-storybook"
