@@ -6,6 +6,7 @@ import { AxiosError } from 'axios';
 import { Button, Dock, Input, Navbar } from "@monorepo/design-system";
 import { useAuth } from '@/contexts/useAuth';
 import "../globals.css";
+import { verifyEmail } from '@/utils/VerifyEmail';
 
 export default function Home() {
   const router = useRouter();
@@ -17,6 +18,12 @@ export default function Home() {
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+
+    if (!verifyEmail(email)) {
+      setErrorMessage("Le format de l'adresse email n'est pas correct");
+      return;
+    }
+
     setErrorMessage('');
     setIsSubmitting(true);
 

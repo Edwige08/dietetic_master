@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { Button, Dock, Input, Navbar } from "@monorepo/design-system";
 import { register } from "@/lib/auth";
 import "../globals.css";
+import { verifyEmail } from '@/utils/VerifyEmail';
 
 export default function Home() {
   const router = useRouter();
@@ -24,6 +25,12 @@ export default function Home() {
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    
+    if (!verifyEmail(formData.email)) {
+      setErrorMessage("Le format de l'adresse email n'est pas correct");
+      return;
+    }
+
     setErrorMessage('');
     setSuccessMessage('');
     setIsSubmitting(true);
