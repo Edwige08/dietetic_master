@@ -1,0 +1,9 @@
+node_modules/
+.next/
+storybook-static/
+.env
+.env.local
+.venv/
+__pycache__/
+*.pyc
+staticfiles/

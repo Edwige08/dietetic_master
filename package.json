@@ -1,0 +1,11 @@
+{
+  "name": "dietetic_master",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --filter @dietetic_master/app dev",
+    "build": "pnpm --filter @dietetic_master/app build",
+    "storybook": "pnpm --filter @dietetic_master/design-system storybook",
+    "build-storybook": "pnpm --filter @dietetic_master/design-system build-storybook"
+  }
+}
