@@ -34,7 +34,7 @@ jobs:
       DJANGO_SECRET_KEY: cle-de-test
     steps:
       - uses: actions/checkout@v7
-      - uses: astral-sh/setup-uv@v10
+      - uses: astral-sh/setup-uv@v7
       - run: uv sync
       - run: uv run ruff check .
       - run: uv run pytest
