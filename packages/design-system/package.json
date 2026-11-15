@@ -19,7 +19,7 @@
     "next": "16.4.2",
     "react": "*",
     "react-dom": "*",
-    "storybook": "^10.6.3",
+    "storybook": "^10.6.7",
     "typescript": "^7.0.2"
   }
 }
