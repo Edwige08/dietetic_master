@@ -13,7 +13,7 @@
     "react-dom": "*"
   },
   "devDependencies": {
-    "@storybook/addon-docs": "^10.6.3",
+    "@storybook/addon-docs": "^10.6.7",
     "@storybook/react-vite": "^10.6.3",
     "@types/react": "^19.3.0",
     "next": "16.4.2",
