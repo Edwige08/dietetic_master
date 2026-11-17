@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@dietetic_master/design-system": "workspace:*",
-    "next": "16.4.2",
+    "next": "16.4.5",
     "react": "19.3.0",
     "react-dom": "19.3.0"
   },
