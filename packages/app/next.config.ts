@@ -1,10 +1,12 @@
 import type { NextConfig } from "next";
 
+const API_URL = process.env.API_URL ?? 'http://localhost:8000';
+
 const nextConfig: NextConfig = {
-  /* config options here */
   cacheComponents: true,
   partialPrefetching: true,
   transpilePackages: ['@dietetic_master/design-system'],
+  skipTrailingSlashRedirect: true,
   turbopack: {
     rules: {
       "*.css": {
@@ -12,6 +14,13 @@ const nextConfig: NextConfig = {
         as: "*.css",
       },
     },
+  },
+
+  async rewrites() {
+    return [
+      { source: '/api/:path*/', destination: `${API_URL}/api/:path*/` },
+      { source: '/api/:path*', destination: `${API_URL}/api/:path*` },
+    ];
   },
 };
 
