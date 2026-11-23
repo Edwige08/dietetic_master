@@ -4,6 +4,9 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    groups:
+      mineures-js:
+        update-types: ["minor", "patch"]
   - package-ecosystem: "uv"
     directory: "/packages/api"
     schedule:
